@@ -4,6 +4,11 @@ import { useEffect, useState } from 'react';
 export default function BasicEffectDemo() {
   const [count, setCount] = useState(0);
 
+  // BasicEffectDemo : Fiber DOM tree에 변경 사항을 발생시킨다...
+  //                   Fiber Render Phase -> Fiber Commit Phase -> Browser DOM Tree 적용 -> Render Pipeline -> Rendering
+  //document.title = `count: ${count}`; // -> Browser DOM Tree 적용 -> Render Pipeline 가동 -> 렌더링 끝....
+
+
   // ✅ 렌더링(=> 리액트의 DOM 커밋 후에 Painting 하고 나서) 이후에 실행되는 side effect
   useEffect(() => {
     console.log('✅ [BasicEffectDemo] effect 실행 - DOM 업데이트 이후');
