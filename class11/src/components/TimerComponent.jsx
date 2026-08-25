@@ -6,7 +6,7 @@ function TimerComponent() {
 
   // 최신 count 값 유지
   useEffect(() => {
-    countRef.current = count;
+    countRef.current = count; // 저장 용도
   }, [count]);
 
   // 콜백 함수는 단 한 번만 생성

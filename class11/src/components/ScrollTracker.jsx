@@ -2,7 +2,7 @@ import { useEffect, /*useRef, */useState } from "react";
 
 function ScrollTracker() {
   const [y, setY] = useState(0);
-  // const handlerRef = useRef();
+  // const handlerRef = useRef(null);
 
   // React refs are values that are not needed for rendering. 
   // Refs should only be accessed outside of render, such as in event handlers or effects. 

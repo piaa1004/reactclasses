@@ -28,7 +28,9 @@ function HeavyCalculation() {
   console.log("HeavyCalculation rerendering")
 
   // useMemo로 결과를 캐싱
-  const squaredValue = useMemo(() => heavySquare(number), [number]);
+  const squaredValue = useMemo(
+                        () => heavySquare(number), 
+                        [number]);
 
   console.log("HeavyCalculation squaredValue:" + squaredValue);
 
