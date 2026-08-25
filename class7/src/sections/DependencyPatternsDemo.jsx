@@ -32,6 +32,7 @@ export default function DependencyPatternsDemo() {
 
     return () => {
       setLogsEmpty((prev) => [...prev, '언마운트 시 한 번 실행']);
+      console.log("...unmount...DependencyPatternsDemo")
     };
   }, []);
 

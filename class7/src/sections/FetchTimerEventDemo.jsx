@@ -1,6 +1,8 @@
 // src/sections/FetchTimerEventDemo.jsx
 import { useEffect, useState } from 'react';
 
+
+// search는 부모 컴포넌트로부터 전달받는 props...
 function FetchUsers({ search }) {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -20,6 +22,7 @@ function FetchUsers({ search }) {
         // fetch를 통해서 비동기 Http request를 위 백엔드 서버에게 전송
         // 디폴트로 GET 메서드임!
         // fetch가 fullfilled 또는 rejected 상태의 프로미스를 리턴함.
+        // : 우리는 프로젝트에서 Redux ToolKit Query(rtk query) 사용(fetch api를 사용함)할 예정임.
         const res = await fetch(
           `https://jsonplaceholder.typicode.com/users?search=${encodeURIComponent(search)}`,
           { signal: controller.signal }, // AbortController와 fetch를 연결하는 “와이어” 역할
@@ -99,10 +102,10 @@ function ResizeDemo() {
         setWidth(window.innerWidth);
       }
 
+      // window 객체의 
       window.addEventListener('resize', handleResize);  // resize 이벤트 핸들러를 등록했음.
       return () => window.removeEventListener('resize', handleResize);
-    }, 
-    []);
+    }, []);
 
   return (
     <p style={{ fontSize: 13 }}>
