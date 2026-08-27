@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
+// import Footer from './Footer';
 
 const Layout = () => (
   /*
@@ -26,9 +27,11 @@ const Layout = () => (
     <nav style={{ marginBottom: 20 }}>
       <Link to="/">Home</Link> |{" "}
       <Link to="/users">Users</Link> |{" "}
-      <Link to="/search?query=test">Search</Link>
+      <Link to="/search?query=test&hello=world">Search</Link>
     </nav>
     <Outlet /> 
+
+    {/* <Footer /> */}
   </div>
 );
 

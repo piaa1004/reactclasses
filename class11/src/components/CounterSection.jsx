@@ -2,8 +2,10 @@ import React, { useState, useCallback } from 'react';
 import ChildButton from './ChildButton';
 
 function CounterSection() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);  // setCount 함수에게 전달될 수 있는 아규먼트는? 정수값 또는 콜백함수...
   const [toggle, setToggle] = useState(false);
+
+  // count = count + 1; 아무 의미 없음
 
   // 매번 새로운 함수가 생성되지 않도록 useCallback 사용
   const handleIncrement = useCallback(() => {
