@@ -3,6 +3,7 @@ import {
   Outlet
 } from "react-router-dom";
 import LocationInfo from "./LocationInfo";
+import ProductMatchInfo from "./ProductMatchInfo";
 
 function Layout() {
   const activeStyle = {
@@ -79,6 +80,7 @@ function Layout() {
       </main>
 
       <LocationInfo />
+      <ProductMatchInfo />
     </div>
   );
 }
