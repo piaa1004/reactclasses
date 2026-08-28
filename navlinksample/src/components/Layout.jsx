@@ -2,6 +2,7 @@ import {
   NavLink,
   Outlet
 } from "react-router-dom";
+import LocationInfo from "./LocationInfo";
 
 function Layout() {
   const activeStyle = {
@@ -16,7 +17,7 @@ function Layout() {
 
         <nav>
           <NavLink
-            to="/"
+            to="/"  
             end
             style={({ isActive }) =>
               isActive ? activeStyle : undefined
@@ -47,7 +48,7 @@ function Layout() {
             Products
           </NavLink>
 
-          {/* {" | "}
+          {" | "}
 
           <NavLink
             to="/dashboard"
@@ -67,7 +68,7 @@ function Layout() {
             }
           >
             Search
-          </NavLink> */}
+          </NavLink>
         </nav>
       </header>
 
@@ -76,6 +77,8 @@ function Layout() {
       <main>
         <Outlet />
       </main>
+
+      <LocationInfo />
     </div>
   );
 }

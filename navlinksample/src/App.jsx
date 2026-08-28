@@ -10,6 +10,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
+import Search from "./pages/Search";
+import DashboardLayout from "./pages/DashboardLayout";
+import DashboardHome from "./pages/DashboardHome";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import NotFound from "./pages/NotFound";
+
+
 
 function App() {
   return (
@@ -25,6 +33,21 @@ function App() {
 
           <Route path=":productId" element={<ProductDetail />} />
         </Route>
+
+        {/* Query String */}
+        <Route path="search" element={<Search />} />
+
+        {/* Dashboard Nested Route */}
+        <Route path="dashboard" element={<DashboardLayout />} >
+          <Route index element={<DashboardHome />} />
+
+          <Route path="profile" element={<Profile />} />
+
+          <Route path="settings" element={<Settings />} />
+        </Route>
+
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
 
       </Route>
     </Routes>
