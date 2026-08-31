@@ -1,0 +1,2 @@
+## Required Dependencies
+$ npm install redux react-redux redux-thunk
